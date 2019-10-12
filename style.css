@@ -67,11 +67,7 @@ label{
     font-family: 'Raleway', sans-serif;
     display: grid;
     grid-template-columns: 350px 90px 280px;
-    grid-template-areas: 
-    "i la a"
-    "i lpr p"
-    "i lr r"
-    "i lpark park";
+    
     box-shadow: 1px 1px 3px #0a1612;
     margin: 20px;
     padding: 20px;
@@ -80,6 +76,39 @@ label{
     align-items: center;
 }
 
+.regular{
+    grid-template-areas: 
+    "i la a"
+    "i lpr p"
+    "i lr r";
+}
+
+.immediate{
+    grid-template-areas: 
+    "i la a"
+    "i lpr p"
+    "i lr r"
+    "i ln n"
+    "i lm m";
+}
+
+.parking{
+    grid-template-areas: 
+    "i la a"
+    "i lpr p"
+    "i lr r"
+    "i lpa pa";
+}
+
+.both{
+    grid-template-areas: 
+    "i la a"
+    "i lpr p"
+    "i lr r"
+    "i lpa pa"
+    "i ln n"
+    "i lm m";
+}
 .check-group{
     height: 35px;
 }
@@ -127,7 +156,7 @@ button:active{background-color: #443729;}
 }
 
 .result>.l-park{
-    grid-area: lpark;
+    grid-area: lpa;
 }
 
 .result>.l-immediate{}
@@ -145,11 +174,26 @@ button:active{background-color: #443729;}
 }
 
 .result>.parking{
-    grid-area: park;
+    grid-area: pa;
 }
 
 .result>.immediate{}
 
+.result>.l-name{
+    grid-area: ln;
+}
+
+.result>.name{
+    grid-area:n;
+}
+
+.result>.l-email{
+    grid-area: lm;
+}
+
+.result>.email{
+    grid-area: m;
+}
 .no-match{
     color: #DD6300;
     display: inline-block;
